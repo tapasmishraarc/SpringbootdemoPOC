@@ -3,9 +3,6 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger:
-- main
-
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -21,4 +18,4 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'deploy'
     options: '-DskipITs --settings ./JavaSpringboot/settings.xml'
-    codeCoverageToolOption: JaCoCo
+    codeCoverageToolOption: Cobertura
