@@ -8,7 +8,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Hello from Spring Boot work item transition!";
+		return "Hello this POC is based on Azure Devops for java springboot app!";
 	}
 
 }
