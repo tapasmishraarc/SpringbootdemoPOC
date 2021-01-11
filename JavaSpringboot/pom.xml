@@ -10,8 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>spring-boot</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
-	<name>spring-boot</name>
+	<name>app</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -47,6 +46,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
