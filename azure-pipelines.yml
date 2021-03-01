@@ -7,17 +7,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: SonarQubePrepare@4
-  inputs:
-    SonarQube: 'SonarQube Integration'
-    scannerMode: 'Other'
-    extraProperties: |
-      # Additional properties that will be passed to the scanner, 
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
-      sonar.projectName=springboot
-      sonar.projectKey=springboot
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'JavaSpringboot/pom.xml'
@@ -31,10 +20,6 @@ steps:
     options: '-DskipITs --settings ./JavaSpringboot/settings.xml'
     codeCoverageToolOption: Cobertura
     sonarQubeRunAnalysis: true
-
-- task: SonarQubePublish@4
-  inputs:
-    pollingTimeoutSec: '300'
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
