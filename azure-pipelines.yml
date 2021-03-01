@@ -16,7 +16,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'deploy'
     options: '-DskipITs --settings ./JavaSpringboot/settings.xml'
 
 - task: CopyFiles@2
