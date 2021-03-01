@@ -16,10 +16,8 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'deploy'
+    goals: 'package'
     options: '-DskipITs --settings ./JavaSpringboot/settings.xml'
-    codeCoverageToolOption: Cobertura
-    sonarQubeRunAnalysis: true
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
