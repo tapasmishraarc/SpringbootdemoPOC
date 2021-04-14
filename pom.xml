@@ -49,7 +49,7 @@
 		<finalName>app</finalName>
 		<resources>
 			<resource>
-				<directory>JavaSpringboot</directory>
+				<directory>src</directory>
 			</resource>
     		</resources>
 		<plugins>
