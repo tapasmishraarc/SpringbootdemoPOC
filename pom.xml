@@ -50,7 +50,6 @@
 		<resources>
 			<resource>
 				<directory>JavaSpringboot</directory>
-			    <filtering>false</filtering>
 			</resource>
     		</resources>
 		<plugins>
