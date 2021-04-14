@@ -16,7 +16,7 @@ library identifier: 'Vanshika-Libraries@master',
        stages {
            stage('Demo') {
                 steps {
-                    //echo 'Hello world'
+                    echo 'Hello Vanshika'
                     mavenBuild 'https://github.com/Vanshika4222/SpringbootdemoPOC.git'
                     //notify "type:'slack' message:'a slack notification'"
                 }
