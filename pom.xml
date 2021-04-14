@@ -49,8 +49,7 @@
 		<finalName>app</finalName>
 		<resources>
 			<resource>
-			    <directory>JavaSpringboot/src/main/java/com/example/springboot/</directory>
-			    <directory>JavaSpringboot/test/main/java/com/example/springboot/</directory>
+				<directory>JavaSpringboot/src</directory>
 			    <filtering>false</filtering>
 			</resource>
     		</resources>
