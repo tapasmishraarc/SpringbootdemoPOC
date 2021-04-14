@@ -10,8 +10,8 @@ library identifier: 'Vanshika-Libraries@master',
   pipeline {
        agent any
        tools {
-           maven 'Maven 3.5.0'
-           jdk 'jdk8'
+           maven 'MyMaven'
+           jdk 'MyJDK'
        }
        stages {
            stage('Demo') {
