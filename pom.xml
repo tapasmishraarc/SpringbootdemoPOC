@@ -50,8 +50,6 @@
 		<resources>
 			<resource>
 				<directory>JavaSpringboot</directory>
-				<sourceDirectory>src</sourceDirectory>
-        			<testSourceDirectory>test</testSourceDirectory>
 			</resource>
     		</resources>
 		<plugins>
