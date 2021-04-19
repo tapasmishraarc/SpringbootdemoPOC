@@ -1,25 +1,24 @@
-library identifier: 'Vanshika-Libraries@master',
-    //'master' refers to a valid git-ref
-    //'mylibraryname' can be any name you like
-    retriever: modernSCM([
-      $class: 'GitSCMSource',
-      //credentialsId: 'your-credentials-id',
-      remote: 'https://github.com/Vanshika4222/jenkins-shared-library.git'
-])
+@Library('my-shared-library@master') _
 
-  pipeline {
-       agent any
-       tools {
-           maven "MyMaven"
-           jdk "MyJDK"
-       }
-       stages {
-           stage('Demo') {
-                steps {
-                    echo 'Hello Vanshika'
-                    mavenBuild 'https://github.com/Vanshika4222/SpringbootdemoPOC.git'
-                    //notify "type:'slack' message:'a slack notification'"
-                }
-            }
-        }
+pipeline {
+  agent any
+ 
+  tools {nodejs "nodejs"}
+  parameters {
+        string(name: 'url', defaultValue: 'https://github.com/tapasmishraarc/sample-nodejs.git', description: 'My application url')
     }
+  stages {
+    stage('CI-Pipeline') {
+      steps {
+        script {
+          
+        //readProperties "${params.url}", this
+        echo "${env.APP_NAME}"
+         build  "${params.url}", this
+        }
+        
+      }
+    }
+  }
+}
+
