@@ -1,11 +1,11 @@
-@Library('my-shared-library@master') _
+@Library('my-shared-library@main') _
 
 pipeline {
   agent any
  
-  tools {nodejs "nodejs"}
+  //tools {nodejs "nodejs"}
   parameters {
-        string(name: 'url', defaultValue: 'https://github.com/tapasmishraarc/sample-nodejs.git', description: 'My application url')
+        string(name: 'url', defaultValue: 'https://github.com/tapasmishraarc/SpringbootdemoPOC.git', description: 'My application url')
     }
   stages {
     stage('CI-Pipeline') {
@@ -13,7 +13,7 @@ pipeline {
         script {
           
         //readProperties "${params.url}", this
-        echo "${env.APP_NAME}"
+       // echo "${env.APP_NAME}"
          build  "${params.url}", this
         }
         
