@@ -3,7 +3,7 @@
 pipeline {
   agent any
  
-  //tools {nodejs "nodejs"}
+  tools {maven "MyMaven"}
   parameters {
         string(name: 'url', defaultValue: 'https://github.com/tapasmishraarc/SpringbootdemoPOC.git', description: 'My application url')
     }
